@@ -15,4 +15,6 @@ fn main() {
      to prevent with a panic! macro.
     */ 
     v[99];
+
+    // In order to see the backtrace, run this command: RUST_BACKTRACE=1 cargo run
 }
