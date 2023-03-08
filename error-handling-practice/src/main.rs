@@ -20,6 +20,6 @@ fn main() {
 
     // In order to see the backtrace, run this command: RUST_BACKTRACE=1 cargo run
 
-    file_error();
+    // file_error();
     specific_file_error();
 }
