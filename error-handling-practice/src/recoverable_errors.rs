@@ -38,7 +38,7 @@ pub fn specific_file_error() {
   };
 }
 
-pub fn alternative_file_error_handling() {
+pub fn matchless_file_error() {
   let greeting_file = File::open("hello_again.txt").unwrap_or_else(|error| {
     if error.kind() == ErrorKind::NotFound {
       File::create("hello_again.txt").unwrap_or_else(|error| {
@@ -48,4 +48,8 @@ pub fn alternative_file_error_handling() {
       panic!("Problem opening the file: {:?}", error);
     }
   });
+}
+
+pub fn unwrap_file_error() {
+  let goodbye = File::open("goodbye.txt").unwrap();
 }

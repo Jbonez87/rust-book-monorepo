@@ -2,7 +2,7 @@
 mod recoverable_errors;
 
 // use panic_example::test_panic;
-use recoverable_errors::{file_error, specific_file_error, alternative_file_error_handling};
+use recoverable_errors::{file_error, specific_file_error, matchless_file_error, unwrap_file_error};
 
 fn main() {
     // test_panic();
@@ -22,5 +22,6 @@ fn main() {
 
     // file_error();
     specific_file_error();
-    alternative_file_error_handling()
+    matchless_file_error();
+    unwrap_file_error();
 }
