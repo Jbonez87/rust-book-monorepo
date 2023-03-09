@@ -48,6 +48,4 @@ pub fn alternative_file_error_handling() {
       panic!("Problem opening the file: {:?}", error);
     }
   });
-
-
 }
