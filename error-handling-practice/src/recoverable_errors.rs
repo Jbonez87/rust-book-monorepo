@@ -53,3 +53,8 @@ pub fn matchless_file_error() {
 pub fn unwrap_file_error() {
   let goodbye = File::open("goodbye.txt").unwrap();
 }
+
+pub fn expect_file_error() {
+  let greeting_file = File::open("good_day.txt")
+        .expect("hello.txt should be included in this project");
+}
