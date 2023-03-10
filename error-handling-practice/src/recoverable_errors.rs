@@ -1,5 +1,5 @@
 use std::fs::File;
-use std::io::ErrorKind;
+use std::io::{ErrorKind, self, Read};
 
 pub fn file_error() {
   /*
@@ -57,4 +57,20 @@ pub fn unwrap_file_error() {
 pub fn expect_file_error() {
   let greeting_file = File::open("good_day.txt")
         .expect("hello.txt should be included in this project");
+}
+
+pub fn read_username_from_file() -> Result<String, io::Error> {
+  let username_file_result = File::open("username.txt");
+
+  let mut username_file = match username_file_result {
+    Ok(file) => file,
+    Err(e) => return Err(e),
+  };
+
+  let mut username = String::new();
+
+  match username_file.read_to_string(&mut username) {
+    Ok(_) => Ok(username),
+    Err(e) => Err(e)
+  }
 }
