@@ -75,6 +75,12 @@ pub fn read_username_from_file() -> Result<String, io::Error> {
   }
 }
 
+/*
+  The ? operator is similar to a match statement. If the value of the 
+  Result is an Ok, then it will return the value inside of the Ok.
+  Or else it will return the Err. The main difference between ? and match
+  is that the ? operator uses the `from` function in the From trait on Errors.
+ */
 pub fn concise_read_username_from_file() -> Result<String, io::Error> {
   let mut username_file = File::open("username.txt")?;
   let mut username = String::new();
