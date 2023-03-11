@@ -90,3 +90,11 @@ pub fn concise_read_username_from_file() -> Result<String, io::Error> {
   username_file.read_to_string(&mut username)?;
   Ok(username)
 }
+
+pub fn short_read_username_from_file() -> Result<String, io::Error> {
+  let mut username = String::new();
+
+  File::open("username.txt")?.read_to_string(&mut username)?;
+
+  Ok(username)
+}
