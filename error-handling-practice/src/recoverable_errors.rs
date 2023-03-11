@@ -1,5 +1,4 @@
-use std::fs::File;
-use std::io::{ErrorKind, self, Read};
+use std::{fs, fs::File, io::{ErrorKind, self, Read}};
 
 pub fn file_error() {
   /*
@@ -97,4 +96,8 @@ pub fn short_read_username_from_file() -> Result<String, io::Error> {
   File::open("username.txt")?.read_to_string(&mut username)?;
 
   Ok(username)
+}
+
+pub fn tiny_read_username_from_file() -> Result<String, io::Error> {
+    fs::read_to_string("hello.txt")
 }
