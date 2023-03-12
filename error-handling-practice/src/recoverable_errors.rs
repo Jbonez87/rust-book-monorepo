@@ -110,3 +110,7 @@ pub fn improper_use_of_question_operator() {
   let greeting_file = File::open("hello.txt")?;
 }
 */
+
+pub fn last_char_of_first_line(text: &str) -> Option<char> {
+  text.lines().next()?.chars().last()
+}

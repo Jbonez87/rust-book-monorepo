@@ -1,16 +1,22 @@
+/*
+    Uncomment any of these modules below and call them
+    in the `main` function to trigger and test the errors.
+ */
+
 // mod panic_example;
 mod recoverable_errors;
 
 // use panic_example::test_panic;
 use recoverable_errors::{
-    file_error, 
+    // file_error, 
     specific_file_error, 
     matchless_file_error, 
     unwrap_file_error, 
     expect_file_error, 
-    read_username_from_file, 
-    concise_read_username_from_file,
-    short_read_username_from_file,
+    // read_username_from_file, 
+    // concise_read_username_from_file,
+    // short_read_username_from_file,
+    last_char_of_first_line,
 };
 
 fn main() {
@@ -34,7 +40,12 @@ fn main() {
     matchless_file_error();
     unwrap_file_error();
     expect_file_error();
-    read_username_from_file();
-    concise_read_username_from_file();
-    short_read_username_from_file();
+    // read_username_from_file();
+    // concise_read_username_from_file();
+    // short_read_username_from_file();
+    let word = "Test";
+
+    let word = last_char_of_first_line(word);
+
+    println!("Word is: {:?}", word);
 }
