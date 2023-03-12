@@ -101,3 +101,12 @@ pub fn short_read_username_from_file() -> Result<String, io::Error> {
 pub fn tiny_read_username_from_file() -> Result<String, io::Error> {
     fs::read_to_string("hello.txt")
 }
+
+/*
+  This code will not work because the `?` operator can only be used in a function that returns `Result` or `Option` (or another type that implements `FromResidual`)
+ */
+/*
+pub fn improper_use_of_question_operator() {
+  let greeting_file = File::open("hello.txt")?;
+}
+*/
