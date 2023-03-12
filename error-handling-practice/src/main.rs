@@ -9,10 +9,10 @@ mod recoverable_errors;
 // use panic_example::test_panic;
 use recoverable_errors::{
     // file_error, 
-    specific_file_error, 
-    matchless_file_error, 
-    unwrap_file_error, 
-    expect_file_error, 
+    // specific_file_error, 
+    // matchless_file_error, 
+    // unwrap_file_error, 
+    // expect_file_error, 
     // read_username_from_file, 
     // concise_read_username_from_file,
     // short_read_username_from_file,
@@ -36,10 +36,10 @@ fn main() {
     // In order to see the backtrace, run this command: RUST_BACKTRACE=1 cargo run
 
     // file_error();
-    specific_file_error();
-    matchless_file_error();
-    unwrap_file_error();
-    expect_file_error();
+    // specific_file_error();
+    // matchless_file_error();
+    // unwrap_file_error();
+    // expect_file_error();
     // read_username_from_file();
     // concise_read_username_from_file();
     // short_read_username_from_file();
