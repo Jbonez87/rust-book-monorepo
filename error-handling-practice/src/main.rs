@@ -6,6 +6,7 @@
 // mod panic_example;
 mod recoverable_errors;
 
+use std::{error::Error, fs::File};
 // use panic_example::test_panic;
 use recoverable_errors::{
     // file_error, 
@@ -19,7 +20,7 @@ use recoverable_errors::{
     last_char_of_first_line,
 };
 
-fn main() {
+fn main() -> Result<(), Box<dyn Error>> {
     // test_panic();
 
     // In this example, the panic can be found with a backtrace
@@ -48,4 +49,8 @@ fn main() {
     let word = last_char_of_first_line(word);
 
     println!("Word is: {:?}", word);
+
+    let greeting_file = File::open("hello.txt")?;
+
+    Ok(())
 }
