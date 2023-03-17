@@ -5,6 +5,7 @@
 
 // mod panic_example;
 mod recoverable_errors;
+mod error_handling_examples;
 
 use std::{error::Error, fs::File};
 // use panic_example::test_panic;
