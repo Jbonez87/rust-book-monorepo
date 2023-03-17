@@ -21,6 +21,8 @@ use recoverable_errors::{
     last_char_of_first_line,
 };
 
+use error_handling_examples::{non_error_example};
+
 fn main() -> Result<(), Box<dyn Error>> {
     // test_panic();
 
@@ -45,6 +47,7 @@ fn main() -> Result<(), Box<dyn Error>> {
     // read_username_from_file();
     // concise_read_username_from_file();
     // short_read_username_from_file();
+    non_error_example();
     let word = "Test";
 
     let word = last_char_of_first_line(word);
