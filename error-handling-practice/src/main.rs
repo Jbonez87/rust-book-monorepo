@@ -24,7 +24,9 @@ use recoverable_errors::{
 
 use error_handling_examples::{non_error_example};
 
-use guessing_game::guessing_game_error_handling;
+use guessing_game::{
+    guessing_game_basic_error_handling
+};
 
 fn main() -> Result<(), Box<dyn Error>> {
     // test_panic();
