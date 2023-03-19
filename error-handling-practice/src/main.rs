@@ -6,6 +6,7 @@
 // mod panic_example;
 mod recoverable_errors;
 mod error_handling_examples;
+mod guessing_game;
 
 use std::{error::Error, fs::File};
 // use panic_example::test_panic;
@@ -22,6 +23,8 @@ use recoverable_errors::{
 };
 
 use error_handling_examples::{non_error_example};
+
+use guessing_game::guessing_game_error_handling;
 
 fn main() -> Result<(), Box<dyn Error>> {
     // test_panic();
