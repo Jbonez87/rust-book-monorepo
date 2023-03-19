@@ -16,14 +16,17 @@ pub fn guessing_game_basic_error_handling() {
         io::stdin()
             .read_line(&mut guess)
             .expect("Failed to read line");
-
-        // let guess: u32 = guess.trim().parse().expect("Please type a number!");
-
+        
         let guess: i32 = match guess.trim().parse() {
             Ok(num) => num,
             Err(_) => continue,
         };
 
+        /*
+          This if statement will only check if the number is out
+          of the given range of 1 to 100, but checking this every
+          time could have a negative impact on performance.
+         */
         if guess < 1 || guess > 100 {
           println!("The secret number will be between 1 and 100");
           continue;
