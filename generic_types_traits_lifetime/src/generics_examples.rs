@@ -11,6 +11,9 @@ pub fn code_duplication() {
 
   println!("The largest number is: {}", largest);
 
+  /*
+    How would we handle two lists of numbers?
+  */
   let number_list = vec![102, 34, 6000, 89, 54, 2, 43, 8];
 
   let mut largest = &number_list[0];
