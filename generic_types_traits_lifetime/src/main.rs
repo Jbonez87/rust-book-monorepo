@@ -1,6 +1,6 @@
-mod generics_examples;
+mod function_abstraction;
 
-use generics_examples::{code_duplication, non_duplicate_code};
+use function_abstraction::{code_duplication, non_duplicate_code};
 fn main() {
     code_duplication();
     non_duplicate_code();
