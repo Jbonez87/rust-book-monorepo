@@ -26,17 +26,19 @@ fn largest_char(list: &[char]) -> &char {
   Commenting this function out for now
 */
 
-// fn largest<T>(list: &[T]) -> &T {
-//   let mut largest = &list[0];
+/*
+fn largest<T>(list: &[T]) -> &T {
+  let mut largest = &list[0];
 
-//     for item in list {
-//         if item > largest {
-//             largest = item;
-//         }
-//     }
+    for item in list {
+        if item > largest {
+            largest = item;
+        }
+    }
 
-//     largest
-// }
+    largest
+}
+*/
 
 pub fn generics_practice() {
   let number_list = vec![34, 50, 25, 100, 65];
