@@ -1,5 +1,5 @@
 #[derive(Debug)]
-pub struct Point<T> {
+pub struct Point<T, U> {
   pub x: T,
-  pub y: T
+  pub y: U
 }
