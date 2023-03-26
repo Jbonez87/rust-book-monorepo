@@ -12,4 +12,7 @@ fn main() {
     generics_practice();
     let integer = Point { x: 5, y: 4 };
     println!("Integer is: {:?}", integer);
+
+    let float = Point { x: 7.5, y: 3.8 };
+    println!("Float is: {:?}", float);
 }
