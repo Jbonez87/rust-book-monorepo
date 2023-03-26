@@ -16,6 +16,10 @@ fn main() {
     let float = Point { x: 7.5, y: 3.8 };
     println!("Float is: {:?}", float);
 
-    // This will not work due to the mismatched integer and float types
+    /* 
+      This will not work due to the mismatched integer and float types.
+      In the struct definition, <T> lets the compiler know that both
+      `x` and `y` should be the same type.
+    */
     /* let wont_work = Point { x: 3, y: 7.5 }; */
 }
