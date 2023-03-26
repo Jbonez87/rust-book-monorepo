@@ -15,4 +15,7 @@ fn main() {
 
     let float = Point { x: 7.5, y: 3.8 };
     println!("Float is: {:?}", float);
+
+    // This will not work due to the mismatched integer and float types
+    /* let wont_work = Point { x: 3, y: 7.5 }; */
 }
