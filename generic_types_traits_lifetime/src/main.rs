@@ -22,4 +22,8 @@ fn main() {
       `x` and `y` should be the same type.
     */
     /* let wont_work = Point { x: 3, y: 7.5 }; */
+
+    let both_integer = Point { x: 3, y: 7 };
+    let both_float = Point { x: 7.8, y: 3.3 };
+    let integer_and_float = Point { x: 4, y: 3.4 };
 }
