@@ -24,6 +24,11 @@ fn main() {
     /* let wont_work = Point { x: 3, y: 7.5 }; */
 
     let both_integer = Point { x: 3, y: 7 };
+    println!("both_integer is: {:?}", both_integer);
+
     let both_float = Point { x: 7.8, y: 3.3 };
+    println!("both_float is: {:?}", both_float);
+
     let integer_and_float = Point { x: 4, y: 3.4 };
+    println!("integer_and_float is: {:?}", integer_and_float);
 }
