@@ -31,4 +31,8 @@ fn main() {
 
     let integer_and_float = Point { x: 4, y: 3.4 };
     println!("integer_and_float is: {:?}", integer_and_float);
+
+    let p = Point { x: 5, y: 10 };
+
+    println!("p.x = {}", p.x());
 }
