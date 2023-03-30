@@ -9,6 +9,11 @@ impl<T> SingleTypePoint<T> {
   }
 }
 
+/*
+  This example uses a concrete type `f32` meaning
+  only instances of `SingleTypePoint` that use `f32`
+  will be able to use this method.
+ */
 impl SingleTypePoint<f32> {
   pub fn distance_from_origin(&self) -> f32 {
     (self.x.powi(2) + self.y.powi(2)).sqrt()
