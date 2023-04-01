@@ -19,3 +19,8 @@ impl SingleTypePoint<f32> {
     (self.x.powi(2) + self.y.powi(2)).sqrt()
   }
 }
+
+pub struct DoubleTypePoint<X1, Y1> {
+  pub x: X1,
+  pub y: Y1
+}
