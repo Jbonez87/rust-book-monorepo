@@ -37,4 +37,18 @@ fn main() {
     let p = Point { x: 5, y: 10 };
 
     println!("p.x = {}", p.x());
+
+    let p1 = DoubleTypePoint {
+        x: 5,
+        y: 2.4
+    };
+
+    let p2 = DoubleTypePoint {
+        x: "Hello",
+        y: 'c',
+    };
+
+    let p3 = p1.mixup(p2);
+
+    println!("p3.x = {}, p3.y = {}", p3.x, p3.y);
 }
