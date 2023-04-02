@@ -13,3 +13,25 @@ pub enum Option<T> {
   Some(T),
   None
 }
+
+/*
+  The following are examples of how the Rust compiler performs
+  monomorphization, turning generic types into concrete types at compile time
+ */
+
+enum Option_i32 {
+    Some(i32),
+    None,
+}
+
+enum Option_f64 {
+    Some(f64),
+    None,
+}
+
+pub fn generic_to_concrete() {
+  let integer = Option_i32::Some(5);
+  let float = Option_f64::Some(5.0);
+}
+
+
