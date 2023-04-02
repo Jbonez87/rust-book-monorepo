@@ -1,10 +1,12 @@
 mod function_abstraction;
 mod generics_example;
 mod generic_structs;
+mod generic_methods;
 
 use function_abstraction::{code_duplication, non_duplicate_code};
 use generics_example::{generics_practice};
 use generic_structs::{Point};
+use generic_methods::{DoubleTypePoint};
 
 fn main() {
     code_duplication();
