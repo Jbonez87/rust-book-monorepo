@@ -12,7 +12,9 @@ impl<T> SingleTypePoint<T> {
 /*
   This example uses a concrete type `f32` meaning
   only instances of `SingleTypePoint` that use `f32`
-  will be able to use this method.
+  will be able to use this method. Additionally, 
+  since we're using a concrete type, we don't need
+  to specify `impl<T>` when defining the method.
  */
 impl SingleTypePoint<f32> {
   pub fn distance_from_origin(&self) -> f32 {
