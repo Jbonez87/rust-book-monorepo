@@ -8,6 +8,8 @@ use generics_example::{generics_practice};
 use generic_structs::{Point};
 use generic_methods::{DoubleTypePoint};
 
+use crate::generic_methods::SingleTypePoint;
+
 fn main() {
     code_duplication();
     non_duplicate_code();
@@ -37,6 +39,13 @@ fn main() {
     let p = Point { x: 5, y: 10 };
 
     println!("p.x = {}", p.x());
+
+    let floating_point: SingleTypePoint<f32> = SingleTypePoint {
+        x: 1.5,
+        y: 1.5,
+    };
+
+    println!("The distance from origin (0.0, 0.0) is: {}", floating_point.distance_from_origin());
 
     let p1 = DoubleTypePoint {
         x: 5,
