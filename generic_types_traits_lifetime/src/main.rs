@@ -2,13 +2,13 @@ mod function_abstraction;
 mod generics_example;
 mod generic_structs;
 mod generic_methods;
+mod generic_enums;
 
 use function_abstraction::{code_duplication, non_duplicate_code};
 use generics_example::{generics_practice};
 use generic_structs::{Point};
-use generic_methods::{DoubleTypePoint};
-
-use crate::generic_methods::SingleTypePoint;
+use generic_methods::{DoubleTypePoint, SingleTypePoint};
+use generic_enums::generic_to_concrete;
 
 fn main() {
     code_duplication();
@@ -63,6 +63,6 @@ fn main() {
 
     println!("p3.x = {}, p3.y = {}", p3.x, p3.y);
 
-    let integer = Some(5);
-    let float = Some(5.0);
+    generic_to_concrete();
+    
 }

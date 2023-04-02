@@ -16,14 +16,17 @@ pub enum Option<T> {
 
 /*
   The following are examples of how the Rust compiler performs
-  monomorphization, turning generic types into concrete types at compile time
+  monomorphization, turning generic types into concrete types at compile time.
+  This allows us to use generic types without affecting performance.
  */
 
+#[derive(Debug)]
 enum Option_i32 {
     Some(i32),
     None,
 }
 
+#[derive(Debug)]
 enum Option_f64 {
     Some(f64),
     None,
@@ -32,6 +35,7 @@ enum Option_f64 {
 pub fn generic_to_concrete() {
   let integer = Option_i32::Some(5);
   let float = Option_f64::Some(5.0);
+  println!("integer = {:?}, float = {:?}", integer, float);
 }
 
 
