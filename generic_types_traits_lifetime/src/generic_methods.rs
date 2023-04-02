@@ -26,3 +26,12 @@ pub struct DoubleTypePoint<X1, Y1> {
   pub x: X1,
   pub y: Y1
 }
+
+impl<X1, Y1> DoubleTypePoint<X2, Y2> {
+  pub fn mixup<X2, Y2>(self, other: DoubleTypePoint<X2, Y2>) -> DoubleTypePoint<X1, Y2> {
+    DoubleTypePoint {
+      x: self.x,
+      y: other.y,
+    }
+  }
+}
