@@ -64,5 +64,16 @@ fn main() {
     println!("p3.x = {}, p3.y = {}", p3.x, p3.y);
 
     generic_to_concrete();
+
+    /*
+      At compile time, Rust alters the definitions of the 
+      `Option` enum similarly to how the `Option_f64` and 
+      `Option_i32` enums are defined and used in the 
+      generic_enums module
+     */
+    let integer = Some(5);
+    let float = Some(6.0);
+
+    println!("float = {:?}, integer = {:?}", float, integer);
     
 }
