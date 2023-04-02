@@ -1,7 +1,7 @@
 /*
   This is an example of an enum that uses generics. The standard library
-  already provides this type, but this demonstrates how the `Result` type
-  is defined.
+  already provides this type, but this demonstrates how the `Result` and
+  `Option` types are defined.
  */
 
 pub enum Result<T, E> {
@@ -17,7 +17,7 @@ pub enum Option<T> {
 /*
   The following are examples of how the Rust compiler performs
   monomorphization, turning generic types into concrete types at compile time.
-  This allows us to use generic types without affecting performance.
+  This allows us to use generic types without affecting runtime performance.
  */
 
 #[derive(Debug)]
