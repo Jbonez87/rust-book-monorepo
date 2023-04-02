@@ -47,6 +47,8 @@ fn main() {
 
     println!("The distance from origin (0.0, 0.0) is: {}", floating_point.distance_from_origin());
 
+    println!("floating_point.x is: {}", floating_point.x());
+
     let p1 = DoubleTypePoint {
         x: 5,
         y: 2.4
