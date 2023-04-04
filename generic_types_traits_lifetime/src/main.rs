@@ -10,9 +10,7 @@ use generics_example::{generics_practice};
 use generic_structs::{Point};
 use generic_methods::{DoubleTypePoint, SingleTypePoint};
 use generic_enums::generic_to_concrete;
-use aggregator::{NewsArticle, Tweet};
-
-use crate::aggregator::Summary;
+use aggregator::{Summary, Tweet};
 
 fn main() {
     code_duplication();
