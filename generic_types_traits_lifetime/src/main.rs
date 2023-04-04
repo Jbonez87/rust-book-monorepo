@@ -10,7 +10,7 @@ use generics_example::{generics_practice};
 use generic_structs::{Point};
 use generic_methods::{DoubleTypePoint, SingleTypePoint};
 use generic_enums::generic_to_concrete;
-use aggregator::{Summary, Tweet};
+use aggregator::{Summary, Tweet, NewsArticle};
 
 fn main() {
     code_duplication();
@@ -86,5 +86,15 @@ fn main() {
     };
 
     println!("1 new tweet: {}", tweet.summarize());
+
+    let article = NewsArticle {
+        headline: String::from("UCONN wins NCAA Championship!"),
+        location: String::from("Storrs, CT, USA"),
+        author: String::from("John Castrillon"),
+        content: String::from("The UCONN Huskies won their 5th national championship!")
+    };
+
+    println!("New article available! {}", article.summarize());
+
     
 }
