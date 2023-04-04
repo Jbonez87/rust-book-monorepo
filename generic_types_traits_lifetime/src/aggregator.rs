@@ -19,6 +19,10 @@ pub struct NewsArticle {
   pub content: String
 }
 
+/*
+  Note that when implementing a trait on a type, we need to 
+  put the trait after the `impl`.
+ */
 impl Summary for NewsArticle {
   fn summarize(&self) -> String {
     format!("{} by {}, ({})", self.headline, self.author, self.location)
