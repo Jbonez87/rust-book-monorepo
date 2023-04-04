@@ -21,7 +21,8 @@ pub struct NewsArticle {
 
 /*
   Note that when implementing a trait on a type, we need to 
-  put the trait after the `impl`.
+  put the trait after the `impl` and then we need to use the `for`
+  keyword followed by the type.
  */
 impl Summary for NewsArticle {
   fn summarize(&self) -> String {
