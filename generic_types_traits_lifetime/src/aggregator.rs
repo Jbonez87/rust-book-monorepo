@@ -9,7 +9,10 @@
   the `Summary` trait.
  */
 pub trait Summary {
-  fn summarize(&self) -> String;
+  // We can add a default implementation of `summarize`.
+  fn summarize(&self) -> String {
+    String::from("Read more...")
+  }
 }
 
 pub struct NewsArticle {
