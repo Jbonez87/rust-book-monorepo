@@ -4,6 +4,10 @@
   differences though.
  */
 
+/*
+  The `summarize` method can be used on any type that uses
+  the `Summary` trait.
+ */
 pub trait Summary {
   fn summarize(&self) -> String;
 }
