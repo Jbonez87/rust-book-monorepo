@@ -5,7 +5,7 @@
  */
 
 pub trait Summary {
-  pub fn summarize(&self) -> String;
+  fn summarize(&self) -> String;
 }
 
 pub struct NewsArticle {
@@ -13,4 +13,10 @@ pub struct NewsArticle {
   pub location: String,
   pub author: String,
   pub content: String
+}
+
+impl Summary for NewsArticle {
+  fn summarize(&self) -> String {
+    format!("{} by {}, ({})", self.headline, self.author, self.location)
+  }
 }
