@@ -3,12 +3,16 @@ mod generics_example;
 mod generic_structs;
 mod generic_methods;
 mod generic_enums;
+mod aggregator;
 
 use function_abstraction::{code_duplication, non_duplicate_code};
 use generics_example::{generics_practice};
 use generic_structs::{Point};
 use generic_methods::{DoubleTypePoint, SingleTypePoint};
 use generic_enums::generic_to_concrete;
+use aggregator::{NewsArticle, Tweet};
+
+use crate::aggregator::Summary;
 
 fn main() {
     code_duplication();
@@ -75,5 +79,14 @@ fn main() {
     let float = Some(6.0);
 
     println!("float = {:?}, integer = {:?}", float, integer);
+
+    let tweet = Tweet {
+        username: String::from("John_Castrillon"),
+        content: String::from("Learning Rust is fun."),
+        reply: false,
+        retweet: false
+    };
+
+    println!("1 new tweet: {}", tweet.summarize());
     
 }
