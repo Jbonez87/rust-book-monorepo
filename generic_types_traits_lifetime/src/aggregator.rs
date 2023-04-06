@@ -9,9 +9,10 @@
   the `Summary` trait.
  */
 pub trait Summary {
+  fn summarize_author(&self) -> String;
   // We can add a default implementation of `summarize`.
   fn summarize(&self) -> String {
-    String::from("Read more...")
+    format!("(Read more from {}...)", self.summarize_author())
   }
 }
 
@@ -28,6 +29,9 @@ pub struct NewsArticle {
   keyword followed by the type.
  */
 impl Summary for NewsArticle {
+  fn summarize_author(&self) -> String {
+      format!("{}", self.author)
+  }
   fn summarize(&self) -> String {
     format!("{} by {}, ({})", self.headline, self.author, self.location)
   }
@@ -47,6 +51,9 @@ pub struct Tweet {
   would then be "Read more...".
  */
 impl Summary for Tweet {
+  fn summarize_author(&self) -> String {
+    format!("@{}", self.username)
+  }
   fn summarize(&self) -> String {
     format!("{}: {}", self.username, self.content)
   }
