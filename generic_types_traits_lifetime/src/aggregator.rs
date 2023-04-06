@@ -40,6 +40,11 @@ pub struct Tweet {
   pub retweet: bool
 }
 
+/*
+  If we were to leave this `impl` block emoty for our `Tweet`
+  struct, `Tweet` would use `Summary's` default implementation
+  of the `summarize` method.
+ */
 impl Summary for Tweet {
   fn summarize(&self) -> String {
     format!("{}: {}", self.username, self.content)
