@@ -43,7 +43,8 @@ pub struct Tweet {
 /*
   If we were to leave this `impl` block emoty for our `Tweet`
   struct, `Tweet` would use `Summary's` default implementation
-  of the `summarize` method.
+  of the `summarize` method. The output of `Tweet.summarize()` 
+  would then be "Read more...".
  */
 impl Summary for Tweet {
   fn summarize(&self) -> String {
