@@ -54,6 +54,10 @@ impl Summary for Tweet {
   fn summarize_author(&self) -> String {
     format!("@{}", self.username)
   }
+  /*
+    Commenting this out will allow Tweet to use the default
+    implementation of summarize which calls summarize_author.
+   */
   fn summarize(&self) -> String {
     format!("{}: {}", self.username, self.content)
   }
