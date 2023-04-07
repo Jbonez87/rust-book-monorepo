@@ -63,6 +63,9 @@ impl Summary for Tweet {
   }
 }
 
+/*
+  This function uses a reference to the `Summary` trait as a parameter.
+ */
 pub fn notify(item: &impl Summary) {
   println!("Breaking news! {}", item.summarize());
 }
