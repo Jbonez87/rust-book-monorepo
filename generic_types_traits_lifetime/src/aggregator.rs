@@ -66,6 +66,14 @@ impl Summary for Tweet {
 /*
   This function uses a reference to the `Summary` trait as a parameter.
  */
-pub fn notify(item: &impl Summary) {
+pub fn trait_parameter_notify(item: &impl Summary) {
+  println!("Breaking news! {}", item.summarize());
+}
+
+/*
+  This function uses Trait Bound Syntax using the `Summary` trait
+  and a dynamic type T as a reference.
+ */
+pub fn trait_bound_notify<T: Summary>(item: &T) {
   println!("Breaking news! {}", item.summarize());
 }
