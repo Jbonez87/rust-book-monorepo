@@ -1,3 +1,5 @@
+use std::fmt::Display;
+
 /*
   Traits are similar to `interfaces` in other languages
   like TypeScript, Go or Java. There are some subtle
@@ -91,3 +93,11 @@ pub fn trait_bound_notify<T: Summary>(item: &T) {
 
   pub fn notify<T: Summary>(item1: &T, item2: &T) {}
  */
+
+pub fn multiple_trait_bound_notify(item: &(impl Summary + Display)) {
+  println!("Breaking news! {}", item.summarize());
+}
+
+pub fn alt_multiple_trait_notify<T: Summary + Display>(item: &T) {
+  println!("Breaking news! {}", item.summarize());
+}
