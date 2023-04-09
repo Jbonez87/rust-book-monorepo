@@ -1,4 +1,4 @@
-use std::fmt::Display;
+use std::fmt::{Display, Debug};
 
 /*
   Traits are similar to `interfaces` in other languages
@@ -100,4 +100,18 @@ pub fn multiple_trait_bound_notify(item: &(impl Summary + Display)) {
 
 pub fn alt_multiple_trait_notify<T: Summary + Display>(item: &T) {
   println!("Breaking news! {}", item.summarize());
+}
+
+/*
+  We can also use the where clause for trait bound function signatures.
+  This is useful when we're trying to ensure the function signature is
+  readable.
+ */
+
+fn where_clause_function<T, U>(t: &T, u: &U) -> i32
+where
+  T: Display + Clone,
+  U: Clone + Debug,
+{
+  5
 }
