@@ -115,3 +115,16 @@ where
 {
   5
 }
+
+/*
+  We can set the return type to implement a trait as well.
+ */
+
+pub fn return_summarizable() -> impl Summary {
+  Tweet {
+        username: String::from("John_Castrillon"),
+        content: String::from("Learning Rust is fun."),
+        reply: false,
+        retweet: false
+    }
+}
