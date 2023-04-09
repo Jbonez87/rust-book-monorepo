@@ -10,7 +10,7 @@ use generics_example::{generics_practice};
 use generic_structs::{Point};
 use generic_methods::{DoubleTypePoint, SingleTypePoint};
 use generic_enums::generic_to_concrete;
-use aggregator::{Summary, Tweet, NewsArticle, trait_parameter_notify};
+use aggregator::{Summary, Tweet, NewsArticle, trait_parameter_notify, trait_bound_notify};
 
 fn main() {
     code_duplication();
@@ -97,6 +97,8 @@ fn main() {
     println!("New article available! {}", article.summarize());
 
     trait_parameter_notify(&article);
+
+    trait_bound_notify(&article);
 
     
 }
