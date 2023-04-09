@@ -77,3 +77,17 @@ pub fn trait_parameter_notify(item: &impl Summary) {
 pub fn trait_bound_notify<T: Summary>(item: &T) {
   println!("Breaking news! {}", item.summarize());
 }
+
+/*
+  If we wanted to use multiple parameters using trait parameter
+  syntax, we could define notify like this:
+
+  pub fn notify(item1: &impl Summary, item2: &impl Summary) {}
+ */
+
+/*
+  If we wanted to use multiple parameters using trait bound syntax,
+  we could define notify like this:
+
+  pub fn notify<T: Summary>(item1: &T, item2: &T) {}
+ */
