@@ -121,10 +121,10 @@ where
  */
 
 pub fn return_summarizable() -> impl Summary {
-  Tweet {
-        username: String::from("John_Castrillon"),
-        content: String::from("Learning Rust is fun."),
-        reply: false,
-        retweet: false
-    }
+  NewsArticle {
+        headline: String::from("UCONN wins NCAA Championship!"),
+        location: String::from("Storrs, CT, USA"),
+        author: String::from("John Castrillon"),
+        content: String::from("The UCONN Huskies won their 5th national championship!")
+  }
 }
