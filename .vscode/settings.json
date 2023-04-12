@@ -1,0 +1,3 @@
+{
+  "rust-analyzer.linkedProjects": ["./generic_types_traits_lifetime/Cargo.toml"]
+}
