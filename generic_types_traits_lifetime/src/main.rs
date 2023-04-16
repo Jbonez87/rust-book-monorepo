@@ -12,7 +12,7 @@ use generic_structs::{Point};
 use generic_methods::{DoubleTypePoint, SingleTypePoint};
 use generic_enums::generic_to_concrete;
 use aggregator::{Summary, Tweet, NewsArticle, trait_parameter_notify, trait_bound_notify, return_summarizable};
-use lifetimes_examples::{dangling_reference_example};
+use lifetimes_examples::{correct_reference};
 
 
 fn main() {
@@ -104,4 +104,6 @@ fn main() {
     trait_bound_notify(&article);
 
     return_summarizable();
+
+    correct_reference();
 }
