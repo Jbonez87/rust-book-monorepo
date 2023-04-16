@@ -4,6 +4,7 @@ mod generic_structs;
 mod generic_methods;
 mod generic_enums;
 mod aggregator;
+mod lifetimes_examples;
 
 use function_abstraction::{code_duplication, non_duplicate_code};
 use generics_example::{generics_practice};
@@ -11,6 +12,8 @@ use generic_structs::{Point};
 use generic_methods::{DoubleTypePoint, SingleTypePoint};
 use generic_enums::generic_to_concrete;
 use aggregator::{Summary, Tweet, NewsArticle, trait_parameter_notify, trait_bound_notify, return_summarizable};
+use lifetimes_examples::{dangling_reference_example};
+
 
 fn main() {
     code_duplication();
