@@ -106,4 +106,7 @@ fn main() {
     return_summarizable();
 
     correct_reference();
+
+    let string1 = String::from("abcd");
+    let string2 = "def";
 }
