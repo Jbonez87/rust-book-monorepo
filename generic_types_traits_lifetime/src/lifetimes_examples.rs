@@ -25,7 +25,7 @@ pub fn correct_reference() {
   println!("The value of r is: {}", r);
 }
 
-pub fn longest(x: &str, y: &str) -> &str {
+pub fn longest<'a>(x: &'a str, y: &'a str) -> &'a str {
   if x.len() > y.len() {
     x
   } else {
