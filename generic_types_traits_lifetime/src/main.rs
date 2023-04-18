@@ -12,7 +12,7 @@ use generic_structs::{Point};
 use generic_methods::{DoubleTypePoint, SingleTypePoint};
 use generic_enums::generic_to_concrete;
 use aggregator::{Summary, Tweet, NewsArticle, trait_parameter_notify, trait_bound_notify, return_summarizable};
-use lifetimes_examples::{correct_reference};
+use lifetimes_examples::{correct_reference, longest};
 
 
 fn main() {
@@ -109,4 +109,7 @@ fn main() {
 
     let string1 = String::from("abcd");
     let string2 = "def";
+
+    let result = longest(&string1.as_str(), &string2);
+    println!("The longest string is: {}", result);
 }
