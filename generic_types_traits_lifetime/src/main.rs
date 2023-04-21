@@ -121,4 +121,16 @@ fn main() {
 
         println!("The longest string is: {}", result);
     }
+
+    /*
+      Here is a scenario where our code will fail at compile
+      time due to the lifetime of our variables and the scope.
+     */
+    // let string1 = String::from("This is the absolute longest string!");
+
+    // {
+    //     let string2 = String::from("xyz");
+    //     let new_result = longest(&string1.as_str(), &string2.as_str());
+    // }
+    // println!("The longest string is: {}", new_result);
 }
