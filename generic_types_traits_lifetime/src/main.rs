@@ -137,4 +137,20 @@ fn main() {
     //     new_result = longest(&string1.as_str(), &string2.as_str());
     // }
     // println!("The longest string is: {}", new_result);
+
+    /*
+        This will also fail since `string3` and `string4` are
+        defined in the inner scope and longest attempts to use
+        them in the outer scope. This does not satisfy the borrow
+        checker and causes the compiler to throw an error.
+     */
+    // let new_result;
+    // {
+    //     let string3 = String::from("I am the true longest string!!!");
+    //     let string4 = String::from("small");
+    // }
+
+    // new_result = longest(&string3.as_str(), &string4.as_str());
+    // println!("The longest string is: {}", new_result);
+     
 }
