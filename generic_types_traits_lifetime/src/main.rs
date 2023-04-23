@@ -130,10 +130,11 @@ fn main() {
       being dereferenced.
      */
     // let string1 = String::from("This is the absolute longest string!");
+    // let new_result
 
     // {
     //     let string2 = String::from("xyz");
-    //     let new_result = longest(&string1.as_str(), &string2.as_str());
+    //     new_result = longest(&string1.as_str(), &string2.as_str());
     // }
     // println!("The longest string is: {}", new_result);
 }
