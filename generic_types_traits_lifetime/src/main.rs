@@ -125,6 +125,8 @@ fn main() {
     /*
       Here is a scenario where our code will fail at compile
       time due to the lifetime of our variables and the scope.
+      Note that the code executed within the curly braces does
+      not live as long.
      */
     // let string1 = String::from("This is the absolute longest string!");
 
