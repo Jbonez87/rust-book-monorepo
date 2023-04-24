@@ -44,3 +44,14 @@ pub fn longest<'a>(x: &'a str, y: &'a str) -> &'a str {
     x
   }
  */
+
+/*
+  However, this version of longest will fail at compile time due
+  to the fact that it will create a dangling reference. The result
+  variable is not related to the lifetime annotation value at all.
+
+  pub fn longest<'a>(x: &'a str, y: &'a str) -> &'a str {
+    let result = String::from("This is a very long string");
+    result.as_str()
+  }
+ */
