@@ -5,6 +5,7 @@ mod generic_methods;
 mod generic_enums;
 mod aggregator;
 mod lifetimes_examples;
+mod lifetime_structs;
 
 use function_abstraction::{code_duplication, non_duplicate_code};
 use generics_example::{generics_practice};
@@ -13,6 +14,7 @@ use generic_methods::{DoubleTypePoint, SingleTypePoint};
 use generic_enums::generic_to_concrete;
 use aggregator::{Summary, Tweet, NewsArticle, trait_parameter_notify, trait_bound_notify, return_summarizable};
 use lifetimes_examples::{correct_reference, longest};
+use lifetime_structs::{ImportantExcerpt};
 
 
 fn main() {
@@ -152,5 +154,14 @@ fn main() {
 
     // new_result = longest(&string3.as_str(), &string4.as_str());
     // println!("The longest string is: {}", new_result);
+
+    let novel = String::from("Call me John. A long time ago...");
+    let first_sentence = novel.split('.').next().expect("Could not find a .");
+
+    let excerpt = ImportantExcerpt {
+        part: first_sentence
+    };
+
+    println!("The highlighted excerpt is: {:?}", excerpt);
      
 }
