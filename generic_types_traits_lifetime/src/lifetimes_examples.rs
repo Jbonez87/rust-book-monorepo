@@ -57,3 +57,7 @@ pub fn longest<'a>(x: &'a str, y: &'a str) -> &'a str {
     result.as_str()
   }
  */
+
+// pub fn alternate_longest<'a, 'b>(x: &'a str, y: &'b str) -> &str {
+
+// }
