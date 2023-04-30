@@ -163,6 +163,7 @@ fn main() {
     };
 
     println!("The highlighted excerpt is: {:?}", excerpt);
+    println!("The excerpt itself is: {}", excerpt.part);
     println!("The level is: {}", excerpt.level());
     excerpt.announce_and_return_part("The excerpt is ready!");
      
