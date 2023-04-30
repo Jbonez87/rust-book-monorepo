@@ -163,5 +163,6 @@ fn main() {
     };
 
     println!("The highlighted excerpt is: {:?}", excerpt);
+    println!("The level is: {}", excerpt.level());
      
 }
