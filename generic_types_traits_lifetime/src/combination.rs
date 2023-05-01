@@ -1,5 +1,9 @@
 use std::fmt::Display;
 
+/*
+  This function combines generic types, lifetimes and
+  trait bounds.
+ */
 pub fn longest_with_an_announcement<'a, T>(
   x: &'a str,
   y: &'a str,
