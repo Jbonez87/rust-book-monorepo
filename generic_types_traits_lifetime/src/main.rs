@@ -172,7 +172,11 @@ fn main() {
         references that live for the entire duration of a program.
         Please note that the lifetime of all string literals is
         `'static` and we don't need to declare it as such.
+        We also shouldn't use static for any lifetime errors the
+        compiler may throw. We should think of how long the reference
+        should live and adjust our programs accordingly.
      */
     let s: &'static str = "I am a static string";
+    println!("Static string is: {s}");
      
 }
