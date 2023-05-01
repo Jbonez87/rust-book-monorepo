@@ -166,5 +166,11 @@ fn main() {
     println!("The excerpt itself is: {}", excerpt.part);
     println!("The level is: {}", excerpt.level());
     excerpt.announce_and_return_part("The excerpt is ready!");
+
+    /*
+        Static are special lifetimes we have access to. They are
+        references that live for the entire duration of a program. 
+     */
+    let s: &'static str = "I am a static string";
      
 }
