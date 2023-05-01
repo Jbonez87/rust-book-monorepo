@@ -169,7 +169,9 @@ fn main() {
 
     /*
         Static are special lifetimes we have access to. They are
-        references that live for the entire duration of a program. 
+        references that live for the entire duration of a program.
+        Please note that the lifetime of all string literals is
+        `'static` and we don't need to declare it as such.
      */
     let s: &'static str = "I am a static string";
      
