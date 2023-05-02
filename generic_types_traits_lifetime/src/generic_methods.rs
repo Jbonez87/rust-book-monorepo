@@ -17,6 +17,9 @@ impl<T> SingleTypePoint<T> {
   to specify `impl<T>` when defining the method.
  */
 impl SingleTypePoint<f32> {
+  pub fn y(&self) -> f32 {
+    self.y
+  }
   pub fn distance_from_origin(&self) -> f32 {
     (self.x.powi(2) + self.y.powi(2)).sqrt()
   }
