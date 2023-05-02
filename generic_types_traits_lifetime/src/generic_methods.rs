@@ -16,11 +16,11 @@ impl<T> SingleTypePoint<T> {
   since we're using a concrete type, we don't need
   to specify `impl<T>` when defining the method.
  */
-impl SingleTypePoint<f32> {
-  pub fn y(&self) -> f32 {
+impl SingleTypePoint<f64> {
+  pub fn y(&self) -> f64 {
     self.y
   }
-  pub fn distance_from_origin(&self) -> f32 {
+  pub fn distance_from_origin(&self) -> f64 {
     (self.x.powi(2) + self.y.powi(2)).sqrt()
   }
 }

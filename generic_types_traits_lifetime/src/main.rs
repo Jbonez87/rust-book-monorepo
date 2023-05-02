@@ -48,7 +48,7 @@ fn main() {
 
     println!("p.x = {}", p.x());
 
-    let floating_point: SingleTypePoint<f32> = SingleTypePoint {
+    let floating_point: SingleTypePoint<f64> = SingleTypePoint {
         x: 1.5,
         y: 1.5,
     };
