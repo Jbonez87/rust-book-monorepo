@@ -1,3 +1,7 @@
+mod rectangle;
+
+use rectangle::Rectangle;
+
 pub fn add(left: usize, right: usize) -> usize {
     left + right
 }
@@ -14,5 +18,18 @@ mod tests {
     #[test]
     fn another_test() {
         panic!("This test should fail!");
+    }
+    #[test]
+    fn larger_can_hold_smaller() {
+        let larger = Rectangle {
+            width: 9,
+            height: 8
+        };
+
+        let smaller = Rectangle {
+            width: 7,
+            height: 6
+        };
+        assert!(larger.can_hold(&smaller));
     }
 }
