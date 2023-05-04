@@ -19,6 +19,9 @@ mod tests {
     fn another_test() {
         panic!("This test should fail!");
     }
+    /*
+        Rust has a built in assert macro
+     */
     #[test]
     fn larger_can_hold_smaller() {
         let larger = Rectangle {
