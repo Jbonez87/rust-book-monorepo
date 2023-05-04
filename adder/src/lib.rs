@@ -1,6 +1,6 @@
 mod rectangle;
 
-use rectangle::Rectangle;
+use rectangle::{Rectangle};
 
 pub fn add(left: usize, right: usize) -> usize {
     left + right
