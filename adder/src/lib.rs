@@ -35,4 +35,16 @@ mod tests {
         };
         assert!(larger.can_hold(&smaller));
     }
+    #[test]
+    fn smaller_cannot_hold_larger() {
+        let smaller = Rectangle {
+            width: 4,
+            height: 2
+        };
+        let larger = Rectangle {
+            width: 7,
+            height: 3
+        };
+        assert!(!smaller.can_hold(&larger));
+    }
 }
