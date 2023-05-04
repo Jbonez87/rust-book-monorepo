@@ -51,6 +51,11 @@ mod tests {
         };
         assert!(!smaller.can_hold(&larger));
     }
+    /*
+        In other languages, the arguments in assert_eq
+        may be called expected and actual. In Rust,
+        these are called right and left.
+     */
     #[test]
     fn it_adds_two() {
         assert_eq!(4, add_two(2));
