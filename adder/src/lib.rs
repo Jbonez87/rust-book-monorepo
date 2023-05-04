@@ -51,4 +51,8 @@ mod tests {
         };
         assert!(!smaller.can_hold(&larger));
     }
+    #[test]
+    fn it_adds_two() {
+        assert_eq!(4, add_two(2));
+    }
 }
