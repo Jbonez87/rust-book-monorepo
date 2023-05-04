@@ -15,10 +15,10 @@ mod tests {
         let result = add(2, 2);
         assert_eq!(result, 4);
     }
-    #[test]
-    fn another_test() {
-        panic!("This test should fail!");
-    }
+    // #[test]
+    // fn another_test() {
+    //     panic!("This test should fail!");
+    // }
     /*
         Rust has a built in assert macro
      */
