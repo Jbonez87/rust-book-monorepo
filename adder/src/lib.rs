@@ -1,6 +1,8 @@
 mod rectangle;
+mod guess;
 
 use rectangle::{Rectangle};
+use guess::{Guess};
 
 pub fn add(left: usize, right: usize) -> usize {
     left + right
