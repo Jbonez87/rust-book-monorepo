@@ -10,6 +10,10 @@ pub fn add_two(a: i64) -> i64 {
     a + 2
 }
 
+pub fn greeting(name: &str) -> String {
+    format!("Hello, {}!", name)
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -63,5 +67,10 @@ mod tests {
     #[test]
     fn it_only_adds_two() {
         assert_ne!(5, add_two(2));
+    }
+    #[test]
+    fn greeting_contains_name() {
+        let result = greeting("John");
+        assert!(result.contains("John"));
     }
 }
