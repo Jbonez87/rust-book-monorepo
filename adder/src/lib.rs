@@ -93,4 +93,9 @@ mod tests {
     fn greater_than_100() {
         Guess::new(200);
     }
+    #[test]
+    #[should_panic]
+    fn less_than_1() {
+        Guess::precise_new(0);
+    }
 }
