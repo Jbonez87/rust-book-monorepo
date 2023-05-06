@@ -94,8 +94,8 @@ mod tests {
         Guess::new(200);
     }
     #[test]
-    #[should_panic]
-    fn less_than_1() {
-        Guess::precise_new(0);
+    #[should_panic(expected = "less than or equal to 100")]
+    fn more_than_100() {
+        Guess::precise_new(200);
     }
 }
