@@ -2,11 +2,13 @@ mod rectangle;
 mod guess;
 mod add;
 mod greeting;
+mod print_and_return;
 
 use rectangle::{Rectangle};
 use guess::{Guess};
 use add::{add, add_two};
 use greeting::{greeting, bad_greeting};
+use print_and_return::{prints_and_returns_10};
 
 #[cfg(test)]
 mod tests {
@@ -93,5 +95,15 @@ mod tests {
     #[should_panic(expected = "less than or equal to 100")]
     fn more_than_100() {
         Guess::precise_new(200);
+    }
+    #[test]
+    fn this_test_will_pass() {
+        let value = prints_and_returns_10(4);
+        assert_eq!(10, value);
+    }
+    #[test]
+    fn this_test_will_fail() {
+        let value = prints_and_returns_10(5);
+        assert_eq!(value, 8);
     }
 }
