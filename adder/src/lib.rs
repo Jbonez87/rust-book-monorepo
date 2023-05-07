@@ -96,6 +96,10 @@ mod tests {
     fn more_than_100() {
         Guess::precise_new(200);
     }
+    /*
+        If we run this test using cargo test -- --show-output,
+        we will see the `println!` output.
+    */
     #[test]
     fn this_test_will_pass() {
         let value = prints_and_returns_10(4);
