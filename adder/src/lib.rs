@@ -1,24 +1,12 @@
 mod rectangle;
 mod guess;
+mod add;
+mod greeting;
 
 use rectangle::{Rectangle};
 use guess::{Guess};
-
-pub fn add(left: usize, right: usize) -> usize {
-    left + right
-}
-
-pub fn add_two(a: i64) -> i64 {
-    a + 2
-}
-
-pub fn greeting(name: &str) -> String {
-    format!("Hello, {}!", name)
-}
-
-pub fn bad_greeting(name: &str) -> String {
-    String::from("Hello")
-}
+use add::{add, add_two};
+use greeting::{greeting, bad_greeting};
 
 #[cfg(test)]
 mod tests {
