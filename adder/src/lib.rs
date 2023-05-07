@@ -29,6 +29,14 @@ mod tests {
         let result = add(2, 2);
         assert_eq!(result, 4);
     }
+    #[test]
+    fn it_works() -> Result<(), String> {
+        if add(2,2) == 4 {
+            Ok(())
+        } else {
+            Err(String::from("Two plus two does not equal 4!"))
+        }
+    }
     // #[test]
     // fn another_test() {
     //     panic!("This test should fail!");
