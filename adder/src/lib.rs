@@ -83,6 +83,10 @@ mod tests {
     fn it_only_adds_two() {
         assert_ne!(5, add_two(2));
     }
+    /*
+        If we wanted to ignore this test, we could add the following:
+        #[ignore]
+     */
     #[test]
     fn greeting_contains_name() {
         let result = greeting("John");
