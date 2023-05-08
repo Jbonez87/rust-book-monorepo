@@ -24,6 +24,12 @@ mod tests {
         let result = add(2, 2);
         assert_eq!(result, 4);
     }
+    /*
+        We can also run multiple tests by filtering. If we wanted
+        to run tests that contain the word `add`, we could run
+        `cargo test add`. This would run two tests containing the
+        word `add` in the function name.
+     */
     #[test]
     fn it_works() -> Result<(), String> {
         if add(2,2) == 4 {
