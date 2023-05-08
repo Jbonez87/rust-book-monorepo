@@ -91,7 +91,9 @@ mod tests {
     #[ignore]
     /*
         If we wanted to run only the ignored tests, we would run the 
-        following: `cargo test -- --ignored`
+        following: `cargo test -- --ignored`.
+        If we wanted to run all tests whether they are ignored or not,
+        we could run: `cargo test -- --include-ignored`.
      */
     fn this_test_will_be_ignored() {
         panic!("I will never panic because I am ignored");
