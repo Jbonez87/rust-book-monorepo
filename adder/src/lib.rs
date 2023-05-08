@@ -10,6 +10,10 @@ use add::{add, add_two};
 use greeting::{greeting, bad_greeting};
 use print_and_return::{prints_and_returns_10};
 
+fn internal_adder(a: i64, b: i64) -> i64 {
+    a + b
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -37,6 +41,13 @@ mod tests {
         } else {
             Err(String::from("Two plus two does not equal 4!"))
         }
+    }
+    /*
+        We can test private functions as well.
+     */
+    #[test]
+    fn internal() {
+        assert_eq!(4, internal_adder(2, 2));
     }
     // #[test]
     // fn another_test() {
