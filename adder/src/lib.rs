@@ -13,7 +13,12 @@ use print_and_return::{prints_and_returns_10};
 #[cfg(test)]
 mod tests {
     use super::*;
-
+    /*
+        To run only a specific test, you can pass the name
+        of the test function as an argument when running 
+        `cargo test`. For example, to test the function below:
+        `cargo test exploration`
+     */
     #[test]
     fn exploration() {
         let result = add(2, 2);
