@@ -88,6 +88,11 @@ mod tests {
         #[ignore]
      */
     #[test]
+    #[ignore]
+    fn this_test_will_be_ignored() {
+        panic!("I will never panic because I am ignored");
+    }
+    #[test]
     fn greeting_contains_name() {
         let result = greeting("John");
         assert!(result.contains("John"));
