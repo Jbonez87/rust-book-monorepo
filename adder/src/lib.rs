@@ -6,9 +6,13 @@ mod print_and_return;
 
 use rectangle::{Rectangle};
 use guess::{Guess};
-use add::{add, add_two};
+use add::{add};
 use greeting::{greeting, bad_greeting};
 use print_and_return::{prints_and_returns_10};
+
+pub fn add_two(a: i64) -> i64 {
+    a + 2
+}
 
 fn internal_adder(a: i64, b: i64) -> i64 {
     a + b
