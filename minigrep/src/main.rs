@@ -1,5 +1,8 @@
+mod parse_config;
+
 use std::env;
 use std::fs;
+use parse_config::parse_args;
 
 fn main() {
     /*
@@ -7,8 +10,7 @@ fn main() {
      */
     let args: Vec<String> = env::args().collect();
     
-    let query = &args[1];
-    let file_path = &args[2];
+    let (query, file_path) = parse_args(&args);
 
     println!("Searching for {}", query);
     println!("In file {}", file_path);
