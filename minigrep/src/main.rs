@@ -31,9 +31,16 @@ impl Config {
     }
 }
 
-fn parse_args(args: &[String]) -> Config {
-  let query = args[1].clone();
-  let file_path = args[2].clone();
+/*
+    This is the original implementation for minigrep. It parsed
+    terminal arguments, but since it returns a new instance of
+    Config, it is no longer needed. The new method on the Config
+    struct replaces it.
+ */
 
-  Config {query, file_path}
-}
+// fn parse_args(args: &[String]) -> Config {
+//   let query = args[1].clone();
+//   let file_path = args[2].clone();
+
+//   Config {query, file_path}
+// }
