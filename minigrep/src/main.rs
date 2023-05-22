@@ -25,6 +25,7 @@ struct Config {
 impl Config {
     fn new(args: &[String]) -> Config {
         if args.len() < 3 {
+            /* This is a more user friendly error message. */
             panic!("Not enough arguments");
         }
         let query = args[1].clone();
