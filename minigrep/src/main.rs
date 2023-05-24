@@ -27,6 +27,10 @@ struct Config {
 }
 
 impl Config {
+    /*
+        The previous new method still relied on a panic! invocation
+        to handle errors. Our new build method will use a Result type.
+     */
     // fn new(args: &[String]) -> Config {
     //     if args.len() < 3 {
     //         /* This is a more user friendly error message. */
