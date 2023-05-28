@@ -15,7 +15,9 @@ fn main() {
 
     println!("Searching for {}", config.query);
     println!("In file {}", config.file_path);
-
+    /*
+        The run function abstracts the read_file logic out of main
+     */
     run(config);
 }
 
