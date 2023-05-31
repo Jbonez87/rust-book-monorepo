@@ -17,7 +17,10 @@ fn main() {
     println!("Searching for {}", config.query);
     println!("In file {}", config.file_path);
     /*
-        The run function abstracts the read_file logic out of main
+        The `run` function abstracts the read_file logic out of main.
+        We can run this conditionally to handle any errors it might
+        throw. We let the `main` function decide how it wants to handle
+        an error from the `run` function.
      */
     if let Err(e) = run(config) {
         println!("Application error: {e}");
