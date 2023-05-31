@@ -19,7 +19,10 @@ fn main() {
     /*
         The run function abstracts the read_file logic out of main
      */
-    run(config);
+    if let Err(e) = run(config) {
+        println!("Application error: {e}");
+        process::exit(1);
+    }
 }
 
 struct Config {
@@ -72,6 +75,6 @@ fn run(config: Config) -> Result<(), Box<dyn Error>> {
     let contents = fs::read_to_string(config.file_path)?;
 
     println!("With text:\n{contents}");
-    
+
     Ok(())
 }
