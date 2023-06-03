@@ -1,6 +1,6 @@
 use std::env;
 use std::process;
-use minigrep::Config;
+use minigrep::{Config, run};
 
 fn main() {
     /*
@@ -21,7 +21,7 @@ fn main() {
         throw. We let the `main` function decide how it wants to handle
         an error from the `run` function.
      */
-    if let Err(e) = minigrep::run(config) {
+    if let Err(e) = run(config) {
         println!("Application error: {e}");
         process::exit(1);
     }
