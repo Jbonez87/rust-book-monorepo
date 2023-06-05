@@ -13,8 +13,6 @@ fn main() {
         process::exit(1);
     });
 
-    println!("Searching for {}", config.query);
-    println!("In file {}", config.file_path);
     /*
         The `run` function abstracts the read_file logic out of main.
         We can run this conditionally to handle any errors it might
