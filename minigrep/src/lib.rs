@@ -42,6 +42,10 @@ pub fn run(config: Config) -> Result<(), Box<dyn Error>> {
     Ok(())
 }
 
+/*
+  Search and Search Case Insensitive can probably be changed to use
+  or implement a common trait.
+ */
 pub fn search<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
   let mut results = Vec::new();
   
