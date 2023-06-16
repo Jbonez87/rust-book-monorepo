@@ -4,6 +4,10 @@ enum ShirtColor {
     White
 }
 
+struct Inventory {
+    shirts: Vec<ShirtColor>
+}
+
 fn main() {
     println!("Hello, world!");
 }
