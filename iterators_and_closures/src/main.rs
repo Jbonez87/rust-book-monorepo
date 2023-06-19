@@ -38,4 +38,7 @@ fn main() {
     };
 
     let user_pref1 = Some(ShirtColor::Red);
+
+    let giveaway = store.giveaway(user_pref1);
+    
 }
