@@ -39,6 +39,10 @@ fn main() {
 
     let user_pref1 = Some(ShirtColor::Red);
 
-    let giveaway = store.giveaway(user_pref1);
+    let giveaway1 = store.giveaway(user_pref1);
     
+    println!(
+        "The user with preference {:?} gets {:?}!",
+        user_pref1, giveaway1
+    )
 }
