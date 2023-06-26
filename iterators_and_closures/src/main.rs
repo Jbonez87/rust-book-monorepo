@@ -63,5 +63,7 @@ fn main() {
         num
     };
 
-    println!("This closure is: {}", expensive_closure(34))
+    println!("This closure is: {}", expensive_closure(34));
+
+    let example_closure = |x| x;
 }
