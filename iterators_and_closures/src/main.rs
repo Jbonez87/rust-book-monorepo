@@ -62,4 +62,6 @@ fn main() {
         thread::sleep(Duration::from_secs(2));
         num
     };
+
+    println!("This closure is: {}", expensive_closure(34))
 }
