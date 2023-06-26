@@ -68,4 +68,9 @@ fn main() {
     let example_closure = |x| x;
 
     let s = example_closure(String::from("Hello"));
+    /*
+      This would not work since the compiler already inferred
+      example_closure takes in a String
+    */
+    // let t = example_closure(5);
 }
