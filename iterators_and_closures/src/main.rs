@@ -66,4 +66,6 @@ fn main() {
     println!("This closure is: {}", expensive_closure(34));
 
     let example_closure = |x| x;
+
+    let s = example_closure(String::from("Hello"));
 }
