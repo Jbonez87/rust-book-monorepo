@@ -73,4 +73,13 @@ fn main() {
       example_closure takes in a String
     */
     // let t = example_closure(5);
+
+    let nums = vec![6, 4, 11, 23, 19];
+
+    let max_el = nums.iter().max();
+
+    match max_el {
+        Some(&max) => println!("The maximum element is: {}", max),
+        None => println!("The vector is empty.")
+    }
 }
