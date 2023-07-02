@@ -92,4 +92,6 @@ fn main() {
     only_borrows();
 
     println!("After calling closure: {:?}", list);
+
+    let mut list = vec![1, 2, 3];
 }
