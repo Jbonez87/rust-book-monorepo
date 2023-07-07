@@ -101,7 +101,12 @@ fn main() {
 
     println!("After calling closure: {:?}", list);
 
-    println!("End of closures");
+    let list = vec![3, 6, 9];
 
+    println!("Before defining closure: {:?}", list);
+
+    thread::spawn(move || println!("From thread: {:?}", list))
+        .join()
+        .unwrap()
 
 }
