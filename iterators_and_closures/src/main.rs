@@ -101,7 +101,7 @@ fn main() {
 
     println!("After calling closure: {:?}", list);
 
-    println!("End of closures")
+    println!("End of closures");
 
 
 }
