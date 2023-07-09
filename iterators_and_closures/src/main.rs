@@ -105,6 +105,10 @@ fn main() {
 
     println!("Before defining closure: {:?}", list);
 
+    /*
+        The move keyword allows the closure to take ownership
+        of the list vector and spawn a new thread to log it.
+     */
     thread::spawn(move || println!("From thread: {:?}", list))
         .join()
         .unwrap()
