@@ -34,6 +34,21 @@ impl Inventory {
     }
 }
 
+/*
+    An example of a closure defined with traits.
+    impl<T> Option<T> {
+        pub fn unwrap_or_else<F>(self, f: F) -> T
+        where
+        f: FnOnce() -> T 
+        {
+            match self {
+                Some(x) => x,
+                None => f()
+            }
+        }
+    }
+*/
+
 fn main() {
     let store = Inventory {
         shirts: vec![ShirtColor::Blue, ShirtColor::Red, ShirtColor::Blue],
