@@ -130,10 +130,10 @@ fn main() {
     /*
         The move keyword allows the closure to take ownership
         of the list vector and spawn a new thread to log it.
-     */
+    */
     thread::spawn(move || println!("From thread: {:?}", list))
         .join()
-        .unwrap()
+        .unwrap();
 
     let mut list = [
         Rectangle { width: 10, height: 1 },
