@@ -141,6 +141,7 @@ fn main() {
         Rectangle { width: 7, height: 12 },
     ];
 
+    // sort_by_key takes in a closure
     list.sort_by_key(|r| r.width);
     println!("{:#?}", list);
 
