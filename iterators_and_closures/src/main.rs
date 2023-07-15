@@ -145,4 +145,18 @@ fn main() {
     list.sort_by_key(|r| r.width);
     println!("{:#?}", list);
 
+    /*
+        The example below will not compile since sort_by_key
+        is using the FnMut trait for its closure and not
+        FnOnce.
+     */
+    // let mut sort_operations = vec![];
+    // let value = String::from("by key called");
+
+    // list.sort_by_key(|r| {
+    //     sort_operations.push(value);
+    //     r.width
+    // });
+    // println!("{:#?}", list);
+
 }
