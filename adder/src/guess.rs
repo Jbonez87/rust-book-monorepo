@@ -1,7 +1,8 @@
 pub struct Guess {
   value: i64
 }
-
+// implementing the guess struct allows
+// us to write methods to it.
 impl Guess {
   pub fn new(value: i64) -> Guess {
     if value < 1 || value > 100 {
