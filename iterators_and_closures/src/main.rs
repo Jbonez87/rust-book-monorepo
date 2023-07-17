@@ -159,4 +159,13 @@ fn main() {
     // });
     // println!("{:#?}", list);
 
+    let mut num_sort_operations: i32 = 0;
+
+    list.sort_by_key(|r: &Rectangle| {
+        num_sort_operations += 1;
+        r.width
+    });
+
+    println!("{:#?}", list);
+
 }
