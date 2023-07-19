@@ -1,3 +1,6 @@
+mod iterators_practice;
+
+use iterators_practice::{iterators_example};
 use std::{thread, time::Duration};
 
 #[derive(Debug, PartialEq, Copy, Clone)]
@@ -167,5 +170,7 @@ fn main() {
     });
 
     println!("{:#?}", list);
+
+    iterators_example();
 
 }
