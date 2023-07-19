@@ -56,22 +56,22 @@ impl Inventory {
 */
 
 fn main() {
-    let store = Inventory {
+    let store: Inventory = Inventory {
         shirts: vec![ShirtColor::Blue, ShirtColor::Red, ShirtColor::Blue],
     };
 
-    let user_pref1 = Some(ShirtColor::Red);
+    let user_pref1: Option<ShirtColor> = Some(ShirtColor::Red);
 
-    let giveaway1 = store.giveaway(user_pref1);
+    let giveaway1: ShirtColor = store.giveaway(user_pref1);
     
     println!(
         "The user with preference {:?} gets {:?}!",
         user_pref1, giveaway1
     );
 
-    let user_pref2 = None;
+    let user_pref2: Option<ShirtColor> = None;
     
-    let giveaway2 = store.giveaway(user_pref2);
+    let giveaway2: ShirtColor = store.giveaway(user_pref2);
 
     println!(
         "The user with preference {:?} gets {:?}!",
@@ -95,16 +95,16 @@ fn main() {
     */
     // let t = example_closure(5);
 
-    let nums = vec![6, 4, 11, 23, 19];
+    let nums: Vec<i32> = vec![6, 4, 11, 23, 19];
 
-    let max_el = nums.iter().max();
+    let max_el: Option<&i32> = nums.iter().max();
 
     match max_el {
         Some(&max) => println!("The maximum element is: {}", max),
         None => println!("The vector is empty.")
     }
 
-    let list = vec![1,2,3];
+    let list: Vec<i32> = vec![1,2,3];
     println!("Before defining closure: {:?}", list);
 
     let only_borrows = || println!("From closure: {:?}", list);
@@ -115,7 +115,7 @@ fn main() {
     println!("After calling closure: {:?}", list);
 
     // Immutable closure example
-    let mut list = vec![1, 2, 3];
+    let mut list: Vec<i32> = vec![1, 2, 3];
     println!("Before defining closure: {:?}", list);
 
     let mut borrow_mutably = || list.push(9);
@@ -123,7 +123,7 @@ fn main() {
 
     println!("After calling closure: {:?}", list);
 
-    let list = vec![3, 6, 9];
+    let list: Vec<i32> = vec![3, 6, 9];
 
     println!("Before defining closure: {:?}", list);
 
@@ -135,14 +135,14 @@ fn main() {
         .join()
         .unwrap();
 
-    let mut list = [
+    let mut list: [Rectangle; 3] = [
         Rectangle { width: 10, height: 1 },
         Rectangle { width: 3, height: 5 },
         Rectangle { width: 7, height: 12 },
     ];
 
     // sort_by_key takes in a closure
-    list.sort_by_key(|r| r.width);
+    list.sort_by_key(|r: &Rectangle| r.width);
     println!("{:#?}", list);
 
     /*
