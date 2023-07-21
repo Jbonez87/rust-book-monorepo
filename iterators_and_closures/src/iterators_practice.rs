@@ -3,4 +3,8 @@ pub fn iterators_example() {
   let v1_iter: std::slice::Iter<'_, i32> = v1.iter();
 
   println!("{:?}", v1_iter);
+
+  for val in v1_iter {
+    println!("Got {}", val);
+  }
 }
