@@ -21,7 +21,7 @@ fn check_num() {
 }
 
 fn multiple_nums() {
-    let number = 13;
+    let number: i32 = 13;
 
     if number % 4 == 0 {
         println!("number is divisible by 4");
