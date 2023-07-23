@@ -13,10 +13,10 @@ impl Config {
             return Err("Not enough arguments");
         }
 
-        let query = args[1].clone();
-        let file_path = args[2].clone();
+        let query: String = args[1].clone();
+        let file_path: String = args[2].clone();
 
-        let ignore_case = env::var("IGNORE_CASE").is_ok();
+        let ignore_case: bool = env::var("IGNORE_CASE").is_ok();
 
         Ok(Config { 
           query,
@@ -27,9 +27,9 @@ impl Config {
 }
 
 pub fn run(config: Config) -> Result<(), Box<dyn Error>> {
-    let contents = fs::read_to_string(config.file_path)?;
+    let contents: String = fs::read_to_string(config.file_path)?;
 
-    let results = if config.ignore_case {
+    let results: Vec<&str> = if config.ignore_case {
       search_case_insensitive(&config.query, &contents)
     } else {
       search(&config.query, &contents)
@@ -47,7 +47,7 @@ pub fn run(config: Config) -> Result<(), Box<dyn Error>> {
   or implement a common trait.
  */
 pub fn search<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
-  let mut results = Vec::new();
+  let mut results: Vec<&str> = Vec::new();
   
   for line in contents.lines() {
     if line.contains(query) {
@@ -60,8 +60,8 @@ pub fn search<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
 pub fn search_case_insensitive<'a>(
   query: &str, contents: &'a str
 ) -> Vec<&'a str> {
-  let query = query.to_lowercase();
-  let mut results = Vec::new();
+  let query: String = query.to_lowercase();
+  let mut results: Vec<&str> = Vec::new();
 
   for line in contents.lines() {
       if line.to_lowercase().contains(&query) {
