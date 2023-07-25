@@ -8,3 +8,14 @@ pub fn iterators_example() {
     println!("Got {}", val);
   }
 }
+
+/*
+  All iterators implement the Iterator trait defined in the
+  standard library. Below is the trait definition:
+
+  pub trait Iterator {
+    type Item;
+
+    fn next(&mut self) -> Option<Self::Item> 
+  }
+*/
