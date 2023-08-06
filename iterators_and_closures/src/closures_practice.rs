@@ -22,7 +22,7 @@ impl Inventory {
     }
 
     pub fn most_stocked(&self) -> ShirtColor {
-        let mut num_red = 0;
+        let mut num_red: i32 = 0;
         let mut num_blue: i32 = 0;
 
         for color in &self.shirts {
