@@ -1,7 +1,7 @@
 // Fibonacci is called in main
 fn main() {
     println!("Hello, world!");
-    let f = fibonacci(6);
+    let f: i64 = fibonacci(6);
     println!("{f}");
 }
 
