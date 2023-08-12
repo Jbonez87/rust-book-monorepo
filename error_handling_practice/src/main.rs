@@ -54,7 +54,7 @@ fn main() -> Result<(), Box<dyn Error>> {
     // short_read_username_from_file();
     non_error_example();
     
-    let word = "Test";
+    let word: &str = "Test";
 
     let word = last_char_of_first_line(word);
 
