@@ -56,7 +56,7 @@ fn main() -> Result<(), Box<dyn Error>> {
     
     let word: &str = "Test";
 
-    let word = last_char_of_first_line(word);
+    let word: Option<char> = last_char_of_first_line(word);
 
     println!("Word is: {:?}", word);
 
