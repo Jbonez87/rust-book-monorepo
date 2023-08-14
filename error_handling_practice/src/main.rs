@@ -60,7 +60,7 @@ fn main() -> Result<(), Box<dyn Error>> {
 
     println!("Word is: {:?}", word);
 
-    let greeting_file = File::open("hello.txt")?;
+    let greeting_file: File = File::open("hello.txt")?;
 
     Ok(())
 }
