@@ -22,7 +22,7 @@ enum IpAddr {
 
 
 pub fn test_ips() {
-    let four = IpAddrKind::V4;
+    let four: IpAddrKind = IpAddrKind::V4;
     let six = IpAddrKind::V6;
 
     println!("{:?}", four);
