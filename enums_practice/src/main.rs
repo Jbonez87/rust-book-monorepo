@@ -14,7 +14,7 @@ use if_let_practice::if_let_example;
 
 fn main() {
     println!("Hello, world!");
-    let x = 5;
+    let x: i32 = 5;
     let y = Some(5);
 
     let sum = x + y.unwrap_or(0);
