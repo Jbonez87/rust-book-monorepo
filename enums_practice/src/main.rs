@@ -20,7 +20,7 @@ fn main() {
     let sum = x + y.unwrap_or(0);
     println!("Sum is: {sum}");
     test_ips();
-    let ip_kind = IpAddrKind::V4;
+    let ip_kind: IpAddrKind = IpAddrKind::V4;
     route(ip_kind);
     test_message();
     option_test();
