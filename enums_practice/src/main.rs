@@ -17,7 +17,7 @@ fn main() {
     let x: i32 = 5;
     let y: Option<i32> = Some(5);
 
-    let sum = x + y.unwrap_or(0);
+    let sum: i32 = x + y.unwrap_or(0);
     println!("Sum is: {sum}");
     test_ips();
     let ip_kind: IpAddrKind = IpAddrKind::V4;
