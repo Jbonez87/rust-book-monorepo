@@ -6,7 +6,7 @@ pub fn option_test() {
 
   println!("Some number: {:?}, some char: {:?}, absent number: {:?}", some_number, some_char, absent_number);
 
-  let some_value = Some(22);
+  let some_value: Option<i32> = Some(22);
 
   match some_value {
       Some(22) => println!("Twenty-two"),
