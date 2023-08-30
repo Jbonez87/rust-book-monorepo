@@ -7,6 +7,9 @@ pub fn iterators_example() {
   for val in v1_iter {
     println!("Got {}", val);
   }
+
+  let v2 = vec![4,5,6];
+  let mapped_vec = v2.iter().map(|x| x * 3);
 }
 
 /*
@@ -21,3 +24,4 @@ pub fn iterators_example() {
 
   Methods with default implementations elided.
 */
+
