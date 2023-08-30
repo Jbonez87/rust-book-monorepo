@@ -88,7 +88,7 @@ pub fn closures_example() {
 
     let example_closure = |x| x;
 
-    let s = example_closure(String::from("Hello"));
+    let s: String = example_closure(String::from("Hello"));
     /*
       This would not work since the compiler already inferred
       example_closure takes in a String
