@@ -8,7 +8,7 @@ pub fn iterators_example() {
     println!("Got {}", val);
   }
 
-  let v2 = vec![4,5,6];
+  let v2: Vec<i32> = vec![4,5,6];
   let mapped_vec = v2.iter().map(|x| x * 3);
 }
 
