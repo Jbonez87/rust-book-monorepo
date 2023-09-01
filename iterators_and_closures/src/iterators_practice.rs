@@ -9,7 +9,7 @@ pub fn iterators_example() {
   }
 
   let v2: Vec<i32> = vec![4,5,6];
-  let mapped_vec = v2.iter().map(|x| x * 3);
+  let mapped_vec: Vec<_> = v2.iter().map(|x| x * 3).collect();
 
   println!("mapped_vec value is: {:?}", mapped_vec);
 }
