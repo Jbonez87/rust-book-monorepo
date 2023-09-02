@@ -12,6 +12,7 @@ pub fn iterators_example() {
   let mapped_vec: Vec<_> = v2.iter().map(|x| x * 3).collect();
 
   println!("mapped_vec value is: {:?}", mapped_vec);
+  assert_eq!(v2, vec![12, 15, 18]);
 }
 
 /*
