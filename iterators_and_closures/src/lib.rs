@@ -1,3 +1,11 @@
+#[derive(PartialEq, Debug)]
+struct Shoe {
+    size: u32,
+    style: String,
+}
+
+
+
 // these are test iterators
 #[test]
     fn iterator_demonstration() {
