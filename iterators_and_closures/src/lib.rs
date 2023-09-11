@@ -5,7 +5,7 @@ struct Shoe {
 }
 
 fn shoe_in_size(shoes: Vec<Shoe>, shoe_size: u32) -> Vec<Shoe> {
-    shoes.into_iter().filter(|s| s.size == shoe.size).collect()
+    shoes.into_iter().filter(|s| s.size == shoe_size).collect()
 }
 
 // these are test iterators
