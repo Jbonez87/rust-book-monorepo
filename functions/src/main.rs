@@ -18,7 +18,7 @@ fn print_labeled_measurements(value: i64, unit_label: char) {
 }
 
 fn expression_test() {
-    let y = {
+    let y: i32 = {
         let x = 3;
         x + 1
     };
