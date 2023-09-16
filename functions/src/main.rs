@@ -2,7 +2,7 @@ fn main() {
     another_function(55);
     print_labeled_measurements(6, 'h');
     expression_test();
-    let x = five();
+    let x: i64 = five();
     println!("The value of x is: {x}");
 
     let x: i64 = plus_one(5);
