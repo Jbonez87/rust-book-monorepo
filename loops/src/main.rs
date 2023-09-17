@@ -34,7 +34,7 @@ fn test_loop() {
 
 fn loop_label_test() {
     println!("These are labelled and nested loops");
-    let mut count = 0;
+    let mut count: i32 = 0;
 
     'counting_up: loop {
         println!("count = {count}");
