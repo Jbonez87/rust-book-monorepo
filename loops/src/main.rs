@@ -38,7 +38,7 @@ fn loop_label_test() {
 
     'counting_up: loop {
         println!("count = {count}");
-        let mut remaining = 10;
+        let mut remaining: i32 = 10;
 
         loop {
             println!("remaining = {remaining}");
