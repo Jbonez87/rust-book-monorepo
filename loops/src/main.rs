@@ -72,7 +72,7 @@ fn while_loop_test() {
 fn bad_while_loop_test() {
     println!("This is a bad while loop example");
     let a: [i64; 5] = [10, 20, 30, 40, 50];
-    let mut index = 0;
+    let mut index: usize = 0;
 
     while index < 5 {
         println!("the value is: {}", a[index]);
