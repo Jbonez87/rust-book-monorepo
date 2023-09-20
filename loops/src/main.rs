@@ -21,7 +21,7 @@ fn test_loop() {
     println!("This is also a regular loop");
     let mut counter: i64 = 0;
 
-    let result = loop {
+    let result: i64 = loop {
         counter += 1;
 
         if counter == 10 {
