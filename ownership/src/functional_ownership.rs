@@ -1,5 +1,5 @@
 pub fn run() {
-    let _s1 = gives_ownership();         // gives_ownership moves its return
+    let _s1: String = gives_ownership();         // gives_ownership moves its return
                                         // value into s1
 
     let s2 = String::from("hello");     // s2 comes into scope
