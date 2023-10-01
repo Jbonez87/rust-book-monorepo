@@ -4,7 +4,7 @@ pub fn run() {
 
     let s2: String = String::from("hello");     // s2 comes into scope
 
-    let s3 = takes_and_gives_back(s2);  // s2 is moved into
+    let s3: String = takes_and_gives_back(s2);  // s2 is moved into
     println!("{s3}");                       // takes_and_gives_back, which also
                                         // moves its return value into s3
 } // Here, s3 goes out of scope and is dropped. s2 was moved, so nothing
