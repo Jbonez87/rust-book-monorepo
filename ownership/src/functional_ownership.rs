@@ -29,6 +29,6 @@ fn takes_and_gives_back(a_string: String) -> String { // a_string comes into
 }
 
 pub fn calculate_length(s: &String) -> usize {
-  let length = s.len();
+  let length: usize = s.len();
   length
 }
