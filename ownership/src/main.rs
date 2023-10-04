@@ -22,7 +22,7 @@ fn main() {
     functional_ownership::run();
     tuple_ownership::run();
 
-    let test = String::from("test");
+    let test: String = String::from("test");
     let length = calculate_length(&test);
     println!("The length of test is: {}", length);
     
