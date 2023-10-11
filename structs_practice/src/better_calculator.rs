@@ -33,7 +33,7 @@ pub fn run() {
         area(&rect1)
     );
 
-    let rect2 = Rectangle::square(25);
+    let rect2: Rectangle = Rectangle::square(25);
 
     println!("rect2's size is: {:#?}", rect2)
 }
