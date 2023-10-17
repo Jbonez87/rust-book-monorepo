@@ -25,6 +25,6 @@ pub fn iterators_example() {
     fn next(&mut self) -> Option<Self::Item> 
   }
 
-  Methods with default implementations elided.
+  They have methods with default implementations elided.
 */
 
