@@ -8,6 +8,7 @@ pub fn iterators_example() {
 
   println!("{:?}", v1_iter);
 
+  // We can use a variable for the iter() in a for loop.
   for val in v1_iter {
     println!("Got {}", val);
   }
