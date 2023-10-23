@@ -13,6 +13,15 @@ fn shoe_in_size(shoes: Vec<Shoe>, shoe_size: u32) -> Vec<Shoe> {
     fn iterator_demonstration() {
         let v1: Vec<i32> = vec![1, 2, 3];
 
+        /*
+            If we wanted to create an iterator that takes ownership of
+            v1 and returned owned values, we could use the 
+            `into_iter` method. e.g. v1.into_iter();
+
+            Alternatively, if we wanted to iterate over mutable
+            references, we could use the `iter_mut` method.
+            e.g. v1.iter_mut();
+         */
         let mut v1_iter: std::slice::Iter<'_, i32> = v1.iter();
 
         assert_eq!(v1_iter.next(), Some(&1));
