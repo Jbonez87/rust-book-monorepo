@@ -24,6 +24,9 @@ fn shoe_in_size(shoes: Vec<Shoe>, shoe_size: u32) -> Vec<Shoe> {
          */
         let mut v1_iter: std::slice::Iter<'_, i32> = v1.iter();
 
+        /*
+            Methods that call next are called consumer adapters.
+         */
         assert_eq!(v1_iter.next(), Some(&1));
         assert_eq!(v1_iter.next(), Some(&2));
         assert_eq!(v1_iter.next(), Some(&3));
