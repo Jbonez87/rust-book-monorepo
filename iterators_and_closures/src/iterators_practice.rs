@@ -14,13 +14,10 @@ pub fn iterators_example() {
   }
 
   let v2: Vec<i32> = vec![4,5,6];
-  let mapped_vec: Vec<_> = v2.iter().map(|x| x * 3).collect();
+  let mapped_vec: Vec<_> = v2.iter().map(|x: &i32| x * 3).collect();
 
   println!("mapped_vec value is: {:?}", mapped_vec);
   assert_eq!(v2, vec![12, 15, 18]);
-
-  let v1: Vec<i32> = vec![3,6,9];
-  v1.iter().map(|x: &i32| x + 1);
 }
 
 /*
