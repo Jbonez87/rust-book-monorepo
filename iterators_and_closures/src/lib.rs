@@ -8,6 +8,10 @@ fn shoe_in_size(shoes: Vec<Shoe>, shoe_size: u32) -> Vec<Shoe> {
     shoes.into_iter().filter(|s: &Shoe| s.size == shoe_size).collect()
 }
 
+#[cfg(test)]
+mod tests {
+    use super::*;
+}
 // these are test iterators
 #[test]
     fn iterator_demonstration() {
