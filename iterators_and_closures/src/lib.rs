@@ -11,6 +11,11 @@ fn shoe_in_size(shoes: Vec<Shoe>, shoe_size: u32) -> Vec<Shoe> {
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    #[test]
+    fn filters_by_size() {
+        
+    }
 }
 // these are test iterators
 #[test]
