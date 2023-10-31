@@ -86,7 +86,7 @@ pub fn closures_example() {
 
     println!("This closure is: {}", expensive_closure(34));
 
-    let example_closure = |x| x;
+    let example_closure = |x: String| x;
 
     let s: String = example_closure(String::from("Hello"));
     /*
