@@ -14,7 +14,7 @@ mod tests {
 
     #[test]
     fn filters_by_size() {
-        let shoes = vec![
+        let shoes: Vec<Shoe> = vec![
             Shoe {
                 size: 10,
                 style: String::from("sneaker"),
