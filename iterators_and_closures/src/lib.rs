@@ -4,7 +4,7 @@ struct Shoe {
     style: String,
 }
 
-fn shoe_in_size(shoes: Vec<Shoe>, shoe_size: u32) -> Vec<Shoe> {
+fn shoes_in_size(shoes: Vec<Shoe>, shoe_size: u32) -> Vec<Shoe> {
     shoes.into_iter().filter(|s: &Shoe| s.size == shoe_size).collect()
 }
 
@@ -29,7 +29,7 @@ mod tests {
             },
         ];
 
-        let in_my_size: Vec<Shoe> = shoe_in_size(shoes, 10);
+        let in_my_size: Vec<Shoe> = shoes_in_size(shoes, 10);
 
         assert_eq!(
             in_my_size,
