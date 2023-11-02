@@ -29,7 +29,7 @@ mod tests {
             },
         ];
 
-        let in_my_size = shoe_in_size(shoes, 10);
+        let in_my_size: Vec<Shoe> = shoe_in_size(shoes, 10);
 
         assert_eq!(
             in_my_size,
