@@ -7,24 +7,24 @@ pub struct Config {
   pub ignore_case: bool,
 }
 
-impl Config {
-    pub fn build(args: &[String]) -> Result<Config, &'static str> {
-        if args.len() < 3 {
-            return Err("Not enough arguments");
-        }
+// impl Config {
+//     pub fn build(args: &[String]) -> Result<Config, &'static str> {
+//         if args.len() < 3 {
+//             return Err("Not enough arguments");
+//         }
 
-        let query: String = args[1].clone();
-        let file_path: String = args[2].clone();
+//         let query: String = args[1].clone();
+//         let file_path: String = args[2].clone();
 
-        let ignore_case: bool = env::var("IGNORE_CASE").is_ok();
+//         let ignore_case: bool = env::var("IGNORE_CASE").is_ok();
 
-        Ok(Config { 
-          query,
-          file_path,
-          ignore_case,
-        })
-    }
-}
+//         Ok(Config { 
+//           query,
+//           file_path,
+//           ignore_case,
+//         })
+//     }
+// }
 
 pub fn run(config: Config) -> Result<(), Box<dyn Error>> {
     let contents: String = fs::read_to_string(config.file_path)?;
