@@ -6,10 +6,18 @@ fn main() {
     /*
         This is similar to `process.argv.slice(2)` in NodeJS.
      */
-    let args: Vec<String> = env::args().collect();
-    println!("{:?}", args);
+    // let args: Vec<String> = env::args().collect();
+    // println!("{:?}", args);
     
-    let config: Config = Config::build(&args).unwrap_or_else(|err: &str| {
+    // let config: Config = Config::build(&args).unwrap_or_else(|err: &str| {
+    //     eprintln!("Problem parsing arguments: {err}");
+    //     process::exit(1);
+    // });
+
+    /*
+        Alternative build method using iterators
+     */
+    let config = Config::build(env::args()).unwrap_or_else(|err: &str| {
         eprintln!("Problem parsing arguments: {err}");
         process::exit(1);
     });
