@@ -17,7 +17,7 @@ fn main() {
     /*
         Alternative build method using iterators
      */
-    let config = Config::build(env::args()).unwrap_or_else(|err: &str| {
+    let config: Config = Config::build(env::args()).unwrap_or_else(|err: &str| {
         eprintln!("Problem parsing arguments: {err}");
         process::exit(1);
     });
