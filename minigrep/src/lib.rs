@@ -35,17 +35,17 @@ impl Config {
   ) -> Result<Config, &'static str> {
         args.next();
 
-        let query = match args.next() {
+        let query: String = match args.next() {
           Some(args) => args,
           None => return Err("Didn't get a query string.")
         };
 
-        let file_path = match args.next() {
+        let file_path: String = match args.next() {
             Some(arg) => arg,
             None => return Err("Didn't get a file path"),
         };
 
-        let ignore_case = env::var("IGNORE_CASE").is_ok();
+        let ignore_case: bool = env::var("IGNORE_CASE").is_ok();
 
         Ok(Config {
             query,
