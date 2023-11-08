@@ -75,15 +75,25 @@ pub fn run(config: Config) -> Result<(), Box<dyn Error>> {
   Search and Search Case Insensitive can probably be changed to use
   or implement a common trait.
  */
-pub fn search<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
-  let mut results: Vec<&str> = Vec::new();
+// pub fn search<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
+//   let mut results: Vec<&str> = Vec::new();
   
-  for line in contents.lines() {
-    if line.contains(query) {
-      results.push(line);
-    }
-  }
-  results
+//   for line in contents.lines() {
+//     if line.contains(query) {
+//       results.push(line);
+//     }
+//   }
+//   results
+// }
+
+/*
+  Alternative search function using Iterators
+*/
+pub fn search<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
+  contents
+  .lines()
+  .filter(|line| line.contains(query))
+  .collect()
 }
 
 pub fn search_case_insensitive<'a>(
