@@ -1,3 +1,9 @@
+//! # Cargo Practice
+//!
+//! `cargo_practice` is a collection of utilities to make performing certain
+//! calculations more convenient. It is also an example crate that shows the 
+//! different cargo options available to Rust developers!
+ 
 /// Adds one to the number given.
 ///
 /// # Examples
