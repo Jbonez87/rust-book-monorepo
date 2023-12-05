@@ -1,0 +1,6 @@
+{
+  "rust-analyzer.linkedProjects": [
+    "./smart_pointers/Cargo.toml",
+    "./enums_practice/Cargo.toml"
+  ]
+}
