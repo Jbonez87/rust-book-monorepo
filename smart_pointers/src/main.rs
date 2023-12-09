@@ -10,8 +10,8 @@ fn main() {
 
     println!("list is: {:?}", list);
 
-    let x = 5;
-    let y = &x;
+    let x: i32 = 5;
+    let y: &i32 = &x;
 
     assert_eq!(5, x);
     assert_eq!(5, *y);
