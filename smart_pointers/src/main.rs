@@ -5,7 +5,7 @@ use list::List::{Cons, Nil};
 fn main() {
     /* 
         You would never use a Box to store a number on the heap in normal situations.
-        It's more efficient to use the stack, but for the example we used a Box.
+        It's more efficient to use the stack, but for this example we used a Box.
     */
     let b: Box<i32> = Box::new(12);
     println!("b = {}", b);
