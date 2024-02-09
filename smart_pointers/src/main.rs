@@ -10,6 +10,10 @@ fn main() {
     let b: Box<i32> = Box::new(12);
     println!("b = {}", b);
 
+    /* 
+        Cons in our List enum allows us to recursively set a new instance of itself
+        until the last value is nil.
+    */
     let list: list::List = Cons(1, Box::new(Cons(2, Box::new(Cons(3, Box::new(Nil))))));
 
     println!("list is: {:?}", list);
