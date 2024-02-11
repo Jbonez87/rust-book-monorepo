@@ -14,9 +14,11 @@ fn main() {
         Cons in our List enum allows us to recursively set a new instance of itself
         until the last value is nil.
     */
-    let list: list::List = Cons(1, Box::new(Cons(2, Box::new(Cons(3, Box::new(Nil))))));
+    let list: list::List<i32> = Cons(1, Box::new(Cons(2, Box::new(Cons(3, Box::new(Nil))))));
+    let str_list: list::List<&str> = Cons("test", Box::new(Cons("cons", Box::new(Cons("example.", Box::new(Nil))))));
 
     println!("list is: {:?}", list);
+    println!("str_list is: {:?}", str_list);
 
     let x: i32 = 5;
     let y: &i32 = &x;

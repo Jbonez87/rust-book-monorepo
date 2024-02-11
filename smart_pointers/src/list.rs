@@ -1,5 +1,5 @@
 #[derive(Debug)]
-pub enum List {
-  Cons(i32, Box<List>),
+pub enum List<T> {
+  Cons(T, Box<List<T>>),
   Nil,
 }
