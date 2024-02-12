@@ -25,4 +25,7 @@ fn main() {
 
     assert_eq!(5, x);
     assert_eq!(5, *y);
+
+    let x: i32 = 5;
+    let y = Box::new(x);
 }
