@@ -32,11 +32,11 @@ fn main() {
     assert_eq!(5, *y);
 
     let x: i32 = 5;
-    let y = Box::new(x);
+    let y: Box<i32> = Box::new(x);
 
     assert_eq!(5, x);
     assert_eq!(5, *y);
 
     let x: i32 = 8;
-    let y = MyBox::new(x);
+    let y: MyBox<i32> = MyBox::new(x);
 }
