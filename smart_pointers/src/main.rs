@@ -39,4 +39,7 @@ fn main() {
 
     let x: i32 = 8;
     let y: MyBox<i32> = MyBox::new(x);
+
+    assert_eq!(5, x);
+    assert_eq!(5, *y);
 }
