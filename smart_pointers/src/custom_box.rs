@@ -1,6 +1,7 @@
 use std::ops::Deref;
 pub struct MyBox<T>(T);
 
+// this implements the Deref trait with our MyBox struct
 impl<T> Deref for MyBox<T> {
     type Target = T;
 
