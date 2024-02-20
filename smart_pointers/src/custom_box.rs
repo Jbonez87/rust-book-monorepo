@@ -5,7 +5,7 @@ pub struct MyBox<T>(T);
 impl<T> Deref for MyBox<T> {
     type Target = T;
 
-    // our deref method returns self.0
+    // our deref method returns self.0 which is the first element in our tuple.
     fn deref(&self) -> &Self::Target {
         &self.0
     }
