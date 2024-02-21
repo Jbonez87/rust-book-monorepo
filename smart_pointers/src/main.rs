@@ -41,6 +41,6 @@ fn main() {
     let y: MyBox<i32> = MyBox::new(x);
 
     assert_eq!(5, x);
-    // this dereferences the y variable.
+    // This dereferences the y variable. The compiler runs this code: *(y.deref())
     assert_eq!(5, *y);
 }
