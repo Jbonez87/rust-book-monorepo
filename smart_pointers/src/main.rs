@@ -1,7 +1,9 @@
 mod custom_box;
+mod greeting;
 mod list;
 
 use custom_box::MyBox;
+use greeting::hello;
 use list::List::{Cons, Nil};
 
 fn main() {
@@ -43,4 +45,7 @@ fn main() {
     assert_eq!(5, x);
     // This dereferences the y variable. The compiler runs this code: *(y.deref())
     assert_eq!(5, *y);
+
+    let m = MyBox::new(String::from("Johnny"));
+    hello(&m);
 }
