@@ -46,6 +46,6 @@ fn main() {
     // This dereferences the y variable. The compiler runs this code: *(y.deref())
     assert_eq!(5, *y);
 
-    let m = MyBox::new(String::from("Johnny"));
+    let m: MyBox<String> = MyBox::new(String::from("Johnny"));
     hello(&m);
 }
