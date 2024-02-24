@@ -48,4 +48,9 @@ fn main() {
 
     let m: MyBox<String> = MyBox::new(String::from("Johnny"));
     hello(&m);
+    /*
+        Without the deref trait, our code would have to be written like this:
+        let m = MyBox::new(String::from("Rust"));
+        hello(&(*m)[..]);
+    */
 }
