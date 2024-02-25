@@ -1,8 +1,10 @@
 mod custom_box;
+mod custom_smart_pointer;
 mod greeting;
 mod list;
 
 use custom_box::MyBox;
+use custom_smart_pointer::CustomSmartPointer;
 use greeting::hello;
 use list::List::{Cons, Nil};
 
@@ -53,4 +55,12 @@ fn main() {
         let m = MyBox::new(String::from("Rust"));
         hello(&(*m)[..]);
     */
+
+    let c = CustomSmartPointer {
+        data: String::from("my stuff"),
+    };
+    let d = CustomSmartPointer {
+        data: String::from("other stuff"),
+    };
+    println!("CustomSmartPointers created.");
 }
